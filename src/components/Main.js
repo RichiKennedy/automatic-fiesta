@@ -5,15 +5,15 @@ import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
-
+import Intro from "./Intro";
+import { motion } from "framer-motion";
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background-color: aliceblue;
-
+  h1,
   h2,
   h3,
   h4,
@@ -22,6 +22,8 @@ const MainContainer = styled.div`
     font-family: "Karla", sans-serif;
     font-weight: 500;
   }
+  /* background-color: rgb(245, 235, 245); */
+  /* background-color: rgb(0, 150, 57); */
 `;
 
 const Container = styled.div`
@@ -46,7 +48,7 @@ const BLOG = styled(NavLink)`
   z-index: 1;
 `;
 const WORK = styled(NavLink)`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 50%;
   left: 2rem;
@@ -66,7 +68,7 @@ const BottomBar = styled.div`
   justify-content: space-evenly;
 `;
 const ABOUT = styled(NavLink)`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
 
   text-decoration: none;
   z-index: 1;
@@ -112,15 +114,28 @@ const Center = styled.button`
   }
 `;
 
+const Darkdiv = styled.div`
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  border: 0;
+  right: 50%;
+  width: ${(props) => (props.click ? "50% " : "0%")};
+  height: ${(props) => (props.click ? "100% " : "0%")};
+  z-index: 1;
+  transition: height 0.5s ease, width 1s ease 0.5s;
+`;
+
 const Main = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   return (
     <MainContainer>
       <Container>
+        <Darkdiv click={click} />
         <PowerButton />
-        <LogoComponent />
-        <SocialIcons />
+        <LogoComponent theme={click ? "dark" : "light"} />
+        <SocialIcons theme={click ? "dark" : "light"} />
         <Center click={click}>
           <YinYang
             onClick={() => handleClick()}
@@ -134,23 +149,34 @@ const Main = () => {
           target="_blank"
           to={{ pathname: "mailto:richardgrahamkennedy@gmail.com" }}
         >
-          <h2>say hi...</h2>
+          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            say hi...
+          </motion.h2>
         </Contact>
         <BLOG to="/blog">
-          <h2>blog</h2>
+          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            blog{" "}
+          </motion.h2>
         </BLOG>
-        <WORK to="/work">
-          <h2>work</h2>
+        <WORK to="/work" click={click}>
+          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            work
+          </motion.h2>
         </WORK>
         <BottomBar>
-          <ABOUT to="/about">
-            <h2>About.</h2>
+          <ABOUT to="/about" click={click}>
+            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              About.
+            </motion.h2>
           </ABOUT>
           <SKILLS to="/skills">
-            <h2>My Skills.</h2>
+            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              My Skills.
+            </motion.h2>
           </SKILLS>
         </BottomBar>
       </Container>
+      {click ? <Intro click={click} /> : null}
     </MainContainer>
   );
 };
