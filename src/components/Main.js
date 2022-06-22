@@ -7,13 +7,15 @@ import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
 import { motion } from "framer-motion";
+import CVpdf from "../assets/CV/RichardGKennedy_CV2.pdf";
+
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
-  h1,
+
   h2,
   h3,
   h4,
@@ -51,10 +53,20 @@ const WORK = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 50%;
-  left: 2rem;
+  left: 2.5rem;
   transform: translate(-50%, -50%) rotate(-90deg);
   text-decoration: none;
   z-index: 1;
+`;
+const Resume = styled.div`
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  position: absolute;
+  top: 25%;
+  left: 2.5rem;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  text-decoration: none;
+  z-index: 1;
+  cursor: pointer;
 `;
 
 const BottomBar = styled.div`
@@ -134,6 +146,7 @@ const Main = () => {
       <Container>
         <Darkdiv click={click} />
         <PowerButton />
+
         <LogoComponent theme={click ? "dark" : "light"} />
         <SocialIcons theme={click ? "dark" : "light"} />
         <Center click={click}>
@@ -153,9 +166,9 @@ const Main = () => {
             say hi...
           </motion.h2>
         </Contact>
-        <BLOG to="/blog">
+        <BLOG to="/blog" click={click}>
           <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            blog{" "}
+            blog
           </motion.h2>
         </BLOG>
         <WORK to="/work" click={click}>
@@ -163,6 +176,13 @@ const Main = () => {
             work
           </motion.h2>
         </WORK>
+        <Resume click={click}>
+          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <a class="{s.downLoadWrapper}" href={CVpdf} download>
+              CV
+            </a>
+          </motion.h2>
+        </Resume>
         <BottomBar>
           <ABOUT to="/about" click={click}>
             <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>

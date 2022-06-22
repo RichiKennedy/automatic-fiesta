@@ -4,6 +4,8 @@ export const lightTheme = {
   body: "rgb(255, 243, 250)",
   text: "#000000",
   fontFamily: "'Source Sans Pro', sans-serif",
+  //rgb(255, 243, 250)
+  pinkish: "rgb(255, 243, 250)",
   bodyRgba: "252, 246, 244",
   textRgba: "0,0,0",
 };
@@ -13,6 +15,7 @@ export const DarkTheme = {
   // text: "rgb(245, 235, 245)",
   text: "rgb(255, 243, 250)",
   fontFamily: "'Source Sans Pro', sans-serif",
+
   textRgba: "252, 246, 244",
   bodyRgba: "0,0,0",
 };
@@ -27,3 +30,6 @@ export const DarkTheme = {
 
 //pinkish
 //rgb(245, 235, 245)
+
+//new pinkish
+//rgb(255, 243, 250)
