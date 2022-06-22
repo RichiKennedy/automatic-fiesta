@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import blogBackground from "../assets/Images/blogBackground.jpg";
 import PowerButton from "../subComponents/PowerButton";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
+import { Blogs } from "../data/BlogData";
+import BlogComponent from "./BlogComponent";
+import AnchorComponent from "../subComponents/Anchor";
 
 const MainContainer = styled.div`
   /* background-image: url(${blogBackground});
@@ -12,8 +15,7 @@ const MainContainer = styled.div`
   background-attachment: fixed;
   background-position: center; */
   background: ${(props) => props.theme.pinkish};
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
 `;
 
 const Container = styled.div`
@@ -37,6 +39,13 @@ const Grid = styled.div`
 `;
 
 const BlogPage = () => {
+  const [numbers, setNumbers] = useState(0);
+
+  useEffect(() => {
+    let num = (window.innerHeight - 70) / 30;
+    setNumbers(parseInt(num));
+  }, []);
+
   return (
     <MainContainer>
       <Container>
@@ -45,13 +54,11 @@ const BlogPage = () => {
         <SocialIcons />
         <Centre>
           <Grid>
-            <h1>blog</h1>
-            <h1>blog</h1>
-            <h1>blog</h1>
-            <h1>blog</h1>
-            <h1>blog</h1>
-            <h1>blog</h1>
+            {Blogs.map((blog) => {
+              return <BlogComponent key={blog.id} blog={blog} />;
+            })}
           </Grid>
+          <AnchorComponent numbers={numbers} />
         </Centre>
       </Container>
     </MainContainer>

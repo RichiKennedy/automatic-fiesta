@@ -67,6 +67,10 @@ const Resume = styled.div`
   text-decoration: none;
   z-index: 1;
   cursor: pointer;
+
+  a {
+    color: inherit;
+  }
 `;
 
 const BottomBar = styled.div`
@@ -168,7 +172,7 @@ const Main = () => {
         </Contact>
         <BLOG to="/blog" click={click}>
           <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            blog
+            Projects
           </motion.h2>
         </BLOG>
         <WORK to="/work" click={click}>
@@ -177,11 +181,11 @@ const Main = () => {
           </motion.h2>
         </WORK>
         <Resume click={click}>
-          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a class="{s.downLoadWrapper}" href={CVpdf} download>
+          <a class="{s.downLoadWrapper}" href={CVpdf} download>
+            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               CV
-            </a>
-          </motion.h2>
+            </motion.h2>
+          </a>
         </Resume>
         <BottomBar>
           <ABOUT to="/about" click={click}>
