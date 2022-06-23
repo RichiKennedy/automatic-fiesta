@@ -49,19 +49,11 @@ const BLOG = styled(NavLink)`
   text-decoration: none;
   z-index: 1;
 `;
-const WORK = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
-  position: absolute;
-  top: 50%;
-  left: 2.5rem;
-  transform: translate(-50%, -50%) rotate(-90deg);
-  text-decoration: none;
-  z-index: 1;
-`;
+
 const Resume = styled.div`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
-  top: 25%;
+  top: 37.5%;
   left: 2.5rem;
   transform: translate(-50%, -50%) rotate(-90deg);
   text-decoration: none;
@@ -166,35 +158,86 @@ const Main = () => {
           target="_blank"
           to={{ pathname: "mailto:richardgrahamkennedy@gmail.com" }}
         >
-          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 0.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 0.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             say hi...
           </motion.h2>
         </Contact>
         <BLOG to="/blog" click={click}>
-          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 0.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 0.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             Projects
           </motion.h2>
         </BLOG>
-        <WORK to="/work" click={click}>
-          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            work
-          </motion.h2>
-        </WORK>
+
         <Resume click={click}>
           <a class="{s.downLoadWrapper}" href={CVpdf} download>
-            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.h2
+              initial={{
+                y: -200,
+                transition: { type: "spring", duration: 0.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 0.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               CV
             </motion.h2>
           </a>
         </Resume>
         <BottomBar>
           <ABOUT to="/about" click={click}>
-            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: "spring", duration: 0.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 0.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               About.
             </motion.h2>
           </ABOUT>
           <SKILLS to="/skills">
-            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: "spring", duration: 0.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 0.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               My Skills.
             </motion.h2>
           </SKILLS>
