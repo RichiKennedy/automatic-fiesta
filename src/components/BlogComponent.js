@@ -2,9 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Github } from "./AllSvgs";
-import { motion } from "framer-motion";
 
-const Box = styled(motion.li)`
+const Box = styled.div`
   width: calc(10rem + 20vw);
   height: 35rem;
   padding: 1rem;
@@ -102,23 +101,11 @@ const Git = styled(NavLink)`
 `;
 
 // FRAMER-MOTION ANIMATION
-const item = {
-  hidden: {
-    scale: 0,
-  },
-  show: {
-    scale: 1,
-    transition: {
-      type: "spring",
-      duration: 0.5,
-    },
-  },
-};
 
 const BlogComponent = (props) => {
   const { name, description, tags, date, imgSrc, demo, github } = props.blog;
   return (
-    <Box to="/" varients={item}>
+    <Box to="/">
       <Image img={imgSrc} />
 
       <Title>{name}</Title>
