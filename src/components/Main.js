@@ -191,7 +191,7 @@ const Main = () => {
         </BLOG>
 
         <Resume click={click}>
-          <a class="{s.downLoadWrapper}" href={CVpdf} download>
+          <a className="{s.downLoadWrapper}" href={CVpdf} download>
             <motion.h2
               initial={{
                 y: -200,

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import blogBackground from "../assets/Images/blogBackground.jpg";
+
 import PowerButton from "../subComponents/PowerButton";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
@@ -10,11 +10,6 @@ import AnchorComponent from "../subComponents/Anchor";
 import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
 const MainContainer = styled.div`
-  /* background-image: url(${blogBackground});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; */
   background: ${(props) => props.theme.pinkish};
   width: 100vw;
 `;
