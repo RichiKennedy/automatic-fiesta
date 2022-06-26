@@ -43,16 +43,9 @@ const AnchorComponent = (props) => {
       let diffPosition = (diff * 100) / (bodyHeight - windowSize);
 
       ref.current.style.transform = `translateY(${-diffPosition}%)`;
-
-      if (scrollPosition > 5) {
-        hiddenRef.current.style.display = "none";
-      } else {
-        hiddenRef.current.style.display = "block";
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
