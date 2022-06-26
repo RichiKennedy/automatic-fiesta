@@ -1,20 +1,28 @@
 import React, { useEffect, useRef } from "react";
 import { Link, YinYang } from "../components/AllSvgs";
 import styled from "styled-components";
+import { mediaQueries } from "../components/Themes";
 
 const Container = styled.div`
   position: relative;
+
+  ${mediaQueries(45)`
+    
+    display:none;
+
+
+
+  `};
 `;
 const Slider = styled.div`
   position: fixed;
   top: 0;
   right: 2rem;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   transform: translateY(-100%);
-
   .chain {
     transform: rotate(135deg);
   }
@@ -30,8 +38,8 @@ const Rotate = styled.div``;
 
 const AnchorComponent = (props) => {
   const ref = useRef(null);
-  const yinyang = useRef(null);
   const hiddenRef = useRef(null);
+  const yinyang = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,11 +48,12 @@ const AnchorComponent = (props) => {
       let bodyHeight = document.body.offsetHeight;
 
       let diff = Math.max(bodyHeight - (scrollPosition + windowSize));
-      let diffPosition = (diff * 100) / (bodyHeight - windowSize);
+      //diff*100/scrollposition
+      let diffP = (diff * 100) / (bodyHeight - windowSize);
 
-      ref.current.style.transform = `translateY(${-diffPosition}%)`;
+      ref.current.style.transform = `translateY(${-diffP}%)`;
 
-      if (scrollPosition > 5) {
+      if (window.pageYOffset > 5) {
         hiddenRef.current.style.display = "none";
       } else {
         hiddenRef.current.style.display = "block";
@@ -57,23 +66,24 @@ const AnchorComponent = (props) => {
   }, []);
 
   useEffect(() => {
-    const circulate = () => {
+    const rotate = () => {
       yinyang.current.style.transform = `rotate(` + window.pageYOffset + "deg)";
     };
-    window.addEventListener("scroll", circulate);
-    return () => window.removeEventListener("scroll", circulate);
+    window.addEventListener("scroll", rotate);
+    return () => window.removeEventListener("scroll", rotate);
   }, []);
 
   return (
     <Container>
       <PreDisplay ref={hiddenRef} className="hidden">
-        <YinYang hight={80} width={80} fill="currentColor" />
+        <YinYang hight={85} width={85} fill="currentColor" />
       </PreDisplay>
       <Slider ref={ref}>
-        {[...Array(props.numbers)].map((x, id) => {
+        {[...Array(props.number)].map((x, id) => {
           return (
             <Link
               key={id}
+              style={{ padding: "0.1rem 0" }}
               hight={25}
               width={25}
               fill="currentColor"

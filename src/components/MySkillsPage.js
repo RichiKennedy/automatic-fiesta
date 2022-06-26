@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { lightTheme } from "./Themes";
+import { lightTheme, mediaQueries } from "./Themes";
 import { Design, Develope } from "./AllSvgs";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
@@ -15,6 +15,23 @@ const Box = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  ${mediaQueries(50)`
+            flex-direction:column-reverse;  
+            padding:8rem 0;
+height:auto;
+            &>*:nth-child(5){
+              margin-top:5rem;
+            }
+           
+  `};
+  ${mediaQueries(30)`
+           
+            &>*:nth-child(5){
+              margin-top:4rem;
+            }
+           
+  `};
 `;
 
 const Main = styled.div`
@@ -32,6 +49,16 @@ const Main = styled.div`
   flex-direction: column;
   font-family: "Ubuntu Mono", monospace;
 
+  ${mediaQueries(60)`
+            height: 55vh;
+  `};
+
+  ${mediaQueries(50)`
+              width: 50vw;
+              height: max-content;
+
+  `};
+
   &:hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.text};
@@ -43,6 +70,26 @@ const Title = styled.h2`
   justify-content: center;
   align-items: center;
   font-size: calc(1em + 1vw);
+
+  ${mediaQueries(60)`
+          font-size:calc(0.8em + 1vw);
+  `};
+
+  ${mediaQueries(50)`
+          font-size:calc(1em + 2vw);
+          margin-bottom:1rem;
+  `};
+
+  ${mediaQueries(30)`
+                      font-size:calc(1em + 1vw);
+  `};
+  ${mediaQueries(25)`
+                      font-size:calc(0.8em + 1vw);
+                      svg{
+                        width:30px;
+                        height:30px;
+                      }
+  `};
 
   ${Main}:hover & {
     & > * {
@@ -56,10 +103,31 @@ const Title = styled.h2`
 
 const Description = styled.div`
   color: ${(props) => props.theme.text};
-  font-size: calc(0.6em + 1vw);
+  font-size: calc(0.7em + 1vw);
   padding: 0.5rem 0;
+  font-weight: 300;
 
   width: 100%;
+
+  ${mediaQueries(50)`
+            font-size: calc(0.6em + 1vw);
+
+  `};
+
+  ${mediaQueries(30)`
+                      font-size:calc(0.5em + 1vw);
+
+              
+
+  `};
+
+  ${mediaQueries(25)`
+                      font-size:calc(0.4em + 1vw);
+
+              
+
+  `};
+
   ${Main}:hover & {
     color: ${(props) => props.theme.body};
   }
@@ -95,7 +163,7 @@ const MySkillsPage = () => {
           <Description>
             <strong> Skills </strong>
             <p>
-              Imagination|Creativity|Communication Research
+              Imagination, Creativity, Communication Research
               <br />
             </p>
           </Description>
@@ -115,9 +183,9 @@ const MySkillsPage = () => {
           <Description>
             <strong> Skills </strong>
             <p>
-              HTML5|CSS3|SASS|Js|React|Tailwind
+              HTML5, CSS3, SASS, Javascript, React, Tailwind
               <br />
-              Styled-Components|MongoDB|SEO
+              Styled-Components, MongoDB, SEO
             </p>
           </Description>
           <Description>

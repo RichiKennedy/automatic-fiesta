@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Facebook, Github, Instagram, Linkedin } from "../components/AllSvgs";
-import { DarkTheme } from "../components/Themes";
+import { DarkTheme, lightTheme } from "../components/Themes";
 
 const Icons = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ const Line = styled.span`
   width: 2px;
   height: 8rem;
   background-color: ${(props) =>
-    props.color === "dark" ? DarkTheme.text : DarkTheme.body};
+    props.color === "dark" ? DarkTheme.text : lightTheme.text};
 `;
 
 const SocialIcons = (props) => {

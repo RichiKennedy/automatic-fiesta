@@ -8,6 +8,7 @@ import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
 import { motion } from "framer-motion";
 import CVpdf from "../assets/CV/RichardGKennedy_CV2.pdf";
+import { mediaQueries } from "./Themes";
 
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
@@ -24,8 +25,18 @@ const MainContainer = styled.div`
     font-family: "Karla", sans-serif;
     font-weight: 500;
   }
-  /* background-color: rgb(245, 235, 245); */
-  /* background-color: rgb(0, 150, 57); */
+
+  h2 {
+    ${mediaQueries(40)`
+      font-size:1.2em;
+
+  `};
+
+    ${mediaQueries(30)`
+      font-size:1em;
+
+  `};
+  }
 `;
 
 const Container = styled.div`
@@ -33,7 +44,7 @@ const Container = styled.div`
 `;
 
 const Contact = styled(NavLink)`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 2rem;
   right: calc(1rem + 2vw);
@@ -41,13 +52,17 @@ const Contact = styled(NavLink)`
   z-index: 1;
 `;
 const BLOG = styled(NavLink)`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 50%;
   right: calc(1rem + 2vw);
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
+
+  @media only screen and (max-width: 50em) {
+    text-shadow: ${(props) => (props.click ? "0 0 4px #000" : "none")};
+  }
 `;
 
 const Resume = styled.div`
@@ -120,6 +135,17 @@ const Center = styled.button`
     display: ${(props) => (props.click ? "none" : "inline-block ")};
     padding-top: 1rem;
   }
+
+  @media only screen and (max-width: 50em) {
+    top: ${(props) => (props.click ? "90%" : "50%")};
+    left: ${(props) => (props.click ? "90%" : "50%")};
+    width: ${(props) => (props.click ? "80px" : "150px")};
+    height: ${(props) => (props.click ? "80px" : "150px")};
+  }
+  @media only screen and (max-width: 30em) {
+    width: ${(props) => (props.click ? "40px" : "150px")};
+    height: ${(props) => (props.click ? "40px" : "150px")};
+  }
 `;
 
 const Darkdiv = styled.div`
@@ -132,65 +158,154 @@ const Darkdiv = styled.div`
   height: ${(props) => (props.click ? "100% " : "0%")};
   z-index: 1;
   transition: height 0.5s ease, width 1s ease 0.5s;
+
+  ${(props) =>
+    props.click
+      ? mediaQueries(50)`
+       height: 50%;
+  right:0;
+  
+  width: 100%;
+  transition: width 0.5s ease, height 1s ease 0.5s;
+
+  `
+      : mediaQueries(50)`
+       height: 0;
+  
+  width: 0;
+  `};
 `;
 
 const Main = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  const [path, setpath] = useState("");
+
+  const mq = window.matchMedia("(max-width: 50em)").matches;
+  const moveY = {
+    y: "-100%",
+  };
+  const moveX = {
+    x: `${path === "work" ? "100%" : "-100%"}`,
+  };
+
   return (
-    <MainContainer>
+    <MainContainer
+      key="modal"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={path === "about" || path === "skills" ? moveY : moveX}
+      transition={{ duration: 0.5 }}
+    >
+      <Darkdiv click={+click} />
       <Container>
-        <Darkdiv click={click} />
-        <PowerButton />
-
         <LogoComponent theme={click ? "dark" : "light"} />
-        <SocialIcons theme={click ? "dark" : "light"} />
+        <PowerButton />
+        {mq ? (
+          <SocialIcons theme="light" />
+        ) : (
+          <SocialIcons theme={click ? "dark" : "light"} />
+        )}
         <Center click={click}>
-          <YinYang
-            onClick={() => handleClick()}
-            width={click ? 120 : 200}
-            height={click ? 120 : 200}
-            fill="currentColor"
-          />
-          <span>Click here</span>
-        </Center>
-        <Contact
-          target="_blank"
-          to={{ pathname: "mailto:richardgrahamkennedy@gmail.com" }}
-        >
-          <motion.h2
-            initial={{
-              y: -200,
-              transition: { type: "spring", duration: 0.5, delay: 1 },
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 0.5, delay: 1 },
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            say hi...
-          </motion.h2>
-        </Contact>
-        <BLOG to="/blog" click={click}>
-          <motion.h2
-            initial={{
-              y: -200,
-              transition: { type: "spring", duration: 0.5, delay: 1 },
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 0.5, delay: 1 },
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Projects
-          </motion.h2>
-        </BLOG>
+          {mq ? (
+            <YinYang
+              onClick={() => handleClick()}
+              width={click ? 80 : 150}
+              height={click ? 80 : 150}
+              fill="currentColor"
+            />
+          ) : (
+            <YinYang
+              onClick={() => handleClick()}
+              width={click ? 120 : 200}
+              height={click ? 120 : 200}
+              fill="currentColor"
+            />
+          )}
 
-        <Resume click={click}>
+          <span>click here</span>
+        </Center>
+        {mq ? (
+          <Contact
+            click={+click}
+            target="_blank"
+            to={{ pathname: "mailto:richardgrahamkennedy@gmail.com" }}
+          >
+            <motion.h3
+              initial={{
+                y: -200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Say hi..
+            </motion.h3>
+          </Contact>
+        ) : (
+          <Contact
+            click={+false}
+            target="_blank"
+            to={{ pathname: "richardgrahamkennedy@gmail.com" }}
+          >
+            <motion.h3
+              initial={{
+                y: -200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Say hi..
+            </motion.h3>
+          </Contact>
+        )}
+
+        {mq ? (
+          <BLOG click={+click} onClick={() => setpath("blog")} to="/blog">
+            <motion.h2
+              initial={{
+                y: -200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Projects
+            </motion.h2>
+          </BLOG>
+        ) : (
+          <BLOG click={+false} onClick={() => setpath("blog")} to="/blog">
+            <motion.h2
+              initial={{
+                y: -200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Projects
+            </motion.h2>
+          </BLOG>
+        )}
+
+        <Resume click={+click}>
           <a className="{s.downLoadWrapper}" href={CVpdf} download>
             <motion.h2
               initial={{
@@ -209,15 +324,20 @@ const Main = () => {
           </a>
         </Resume>
         <BottomBar>
-          <ABOUT to="/about" click={click}>
+          <ABOUT
+            onClick={() => setClick(false)}
+            click={mq ? +false : +click}
+            to="/about"
+          >
             <motion.h2
+              onClick={() => setpath("about")}
               initial={{
                 y: 200,
-                transition: { type: "spring", duration: 0.5, delay: 1 },
+                transition: { type: "spring", duration: 1.5, delay: 1 },
               }}
               animate={{
                 y: 0,
-                transition: { type: "spring", duration: 0.5, delay: 1 },
+                transition: { type: "spring", duration: 1.5, delay: 1 },
               }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -227,13 +347,14 @@ const Main = () => {
           </ABOUT>
           <SKILLS to="/skills">
             <motion.h2
+              onClick={() => setpath("skills")}
               initial={{
                 y: 200,
-                transition: { type: "spring", duration: 0.5, delay: 1 },
+                transition: { type: "spring", duration: 1.5, delay: 1 },
               }}
               animate={{
                 y: 0,
-                transition: { type: "spring", duration: 0.5, delay: 1 },
+                transition: { type: "spring", duration: 1.5, delay: 1 },
               }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -243,7 +364,7 @@ const Main = () => {
           </SKILLS>
         </BottomBar>
       </Container>
-      {click ? <Intro click={click} /> : null}
+      {click ? <Intro click={+click} /> : null}
     </MainContainer>
   );
 };

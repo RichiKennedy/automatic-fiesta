@@ -6,7 +6,7 @@ import LogoComponent from "../subComponents/LogoComponent";
 import ParticleComponents from "../subComponents/ParticleComponents";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
-import { DarkTheme } from "./Themes";
+import { DarkTheme, mediaQueries } from "./Themes";
 
 // import astronaut from "../assets/Images/spaceman.png";
 
@@ -52,18 +52,42 @@ const Main = styled.div`
   justify-content: center;
   font-size: calc(0.6rem + 1vw);
   backdrop-filter: blur(4px);
+  font-family: "Ubuntu", monospace;
+
+  ${mediaQueries(85)`
+         
+         height: 60vh;
+
+
+  `};
+  ${mediaQueries(30)`
+          width: 50vw;
+          height: 40vh;
+          backdrop-filter: none;
+          margin-top:2rem;
+          font-size: calc(0.4rem + 1vw);
+
+  `};
+
+  ${mediaQueries(20)`
+          padding: 1rem;
+          font-size: calc(0.4rem + 1vw);
+  `};
 
   /* position: absolute; */
   /* left: calc(5rem + 5vw);
   top: 10rem; */
-
-  font-family: "Ubuntu", monospace;
 `;
 
 const AboutPage = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
-      <Box>
+      <Box
+        key="skills"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.5 } }}
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+      >
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
         <PowerButton />

@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { DarkTheme } from "../components/Themes";
+import { DarkTheme, lightTheme } from "../components/Themes";
 
 const Logo = styled.h1`
   display: inline-block;
   font-family: "Rock Salt", cursive;
   color: ${(props) =>
-    props.color === "dark" ? DarkTheme.text : DarkTheme.body};
+    props.color === "dark" ? DarkTheme.text : lightTheme.text};
 
   position: fixed;
   left: 2rem;
