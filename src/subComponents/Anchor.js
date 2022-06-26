@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Link, YinYang } from "../components/AllSvgs";
+import { Anchor, Link } from "../components/AllSvgs";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -26,11 +26,11 @@ const PreDisplay = styled.div`
   right: 2rem;
 `;
 
-const Rotate = styled.div``;
+// const Rotate = styled.div``;
 
 const AnchorComponent = (props) => {
   const ref = useRef(null);
-  const yinyang = useRef(null);
+  // const yinyang = useRef(null);
   const hiddenRef = useRef(null);
 
   useEffect(() => {
@@ -40,27 +40,35 @@ const AnchorComponent = (props) => {
       let bodyHeight = document.body.offsetHeight;
 
       let diff = Math.max(bodyHeight - (scrollPosition + windowSize));
-      let diffPosition = (diff * 100) / (bodyHeight - windowSize);
+      //diff*100/scrollposition
+      let diffP = (diff * 100) / (bodyHeight - windowSize);
 
-      ref.current.style.transform = `translateY(${-diffPosition}%)`;
+      ref.current.style.transform = `translateY(${-diffP}%)`;
+
+      if (window.pageYOffset > 5) {
+        hiddenRef.current.style.display = "none";
+      } else {
+        hiddenRef.current.style.display = "block";
+      }
     };
-
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const circulate = () => {
-      yinyang.current.style.transform = `rotate(` + window.pageYOffset + "deg)";
-    };
-    window.addEventListener("scroll", circulate);
-    return () => window.removeEventListener("scroll", circulate);
-  }, []);
+  // useEffect(() => {
+  //   const circulate = () => {
+  //     yinyang.current.style.transform = `rotate(` + window.pageYOffset + "deg)";
+  //   };
+  //   window.addEventListener("scroll", circulate);
+  //   return () => window.removeEventListener("scroll", circulate);
+  // }, []);
 
   return (
     <Container>
       <PreDisplay ref={hiddenRef} className="hidden">
-        <YinYang hight={80} width={80} fill="currentColor" />
+        {/* <YinYang hight={80} width={80} fill="currentColor" /> */}
+        <Anchor width={70} height={70} fill="currentColor" />
       </PreDisplay>
       <Slider ref={ref}>
         {[...Array(props.numbers)].map((x, id) => {
@@ -74,9 +82,10 @@ const AnchorComponent = (props) => {
             />
           );
         })}
-        <Rotate ref={yinyang}>
+        <Anchor width={70} height={70} fill="currentColor" />
+        {/* <Rotate ref={yinyang}>
           <YinYang hight={85} width={85} fill="currentColor" />
-        </Rotate>
+        </Rotate> */}
       </Slider>
     </Container>
   );
