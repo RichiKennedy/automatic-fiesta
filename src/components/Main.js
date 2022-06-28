@@ -121,13 +121,18 @@ const Center = styled.button`
   outline: none;
   background-color: transparent;
   cursor: pointer;
-
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: all 1s ease;
-
+  .yinyang {
+    text-decoration: none;
+  }
+  span {
+    text-decoration: none;
+  }
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
   }
@@ -209,6 +214,7 @@ const Main = () => {
         <Center click={click}>
           {mq ? (
             <YinYang
+              className="yinyang"
               onClick={() => handleClick()}
               width={click ? 80 : 150}
               height={click ? 80 : 150}
