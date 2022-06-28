@@ -124,7 +124,6 @@ const SocialIcons = (props) => {
           />
         </NavLink>
       </motion.div>
-
       <Line
         initial={{ height: 0 }}
         animate={{ height: mq ? "5rem" : "8rem" }}
