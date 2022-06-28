@@ -33,14 +33,6 @@ const Box = styled(motion.div)`
   border-right: 2px solid ${(props) => props.theme.text};
   z-index: 1;
 
-  ${mediaQueries(1200)`
-    width: 65vw;
-  `};
-
-  ${mediaQueries(60)`
-    width: 70vw;
-  `};
-
   ${mediaQueries(50)`
     width: 70vw;
     height: 90vh
@@ -52,20 +44,18 @@ const Box = styled(motion.div)`
   `};
 
   ${mediaQueries(40)`
-    height: 80vw;
-    width: 80vw
+ 
     
   
   `};
 
   ${mediaQueries(30)`
-    width: 70vw;
-    height: 70vh
+    
     
   
   `};
   ${mediaQueries(20)`
-    width: 60vw;
+ 
     
   
   `};
@@ -106,20 +96,21 @@ const SubBox = styled.div`
   }
 
   ${mediaQueries(60)`
-   
-      .pic {
-    
-    height: 40%
-    
-  }
+  
+  .myPic {
 
-  `};
+width: 100%;
+
+}
+
+`};
+
   ${mediaQueries(50)`
       width: 100%;
     height: 100%;
-      .pic {
+      .myPic {
     
-    height: 10%
+    width: 45%
     
   }
 
@@ -127,9 +118,9 @@ const SubBox = styled.div`
 
   ${mediaQueries(40)`
   
-      .pic {
+      .myPic {
     
-    width: 50%;
+    width: 60%;
     
   }
 
@@ -138,9 +129,9 @@ const SubBox = styled.div`
   ${mediaQueries(30)`
      
 
-      .pic {
+      .myPic {
     
-    width: 40%;
+    width: 75%;
     
   }
 
@@ -148,9 +139,9 @@ const SubBox = styled.div`
   ${mediaQueries(20)`
      
 
-     .pic {
+     .myPic {
    
-   width: 30%;
+   width: 85%;
    
  }
 

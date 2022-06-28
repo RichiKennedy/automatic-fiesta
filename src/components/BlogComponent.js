@@ -25,6 +25,10 @@ const Box = styled(motion(NavLink))`
     transition: all 0.3s ease;
   }
 
+  ${mediaQueries(60)`
+    width:calc(35vw);
+
+  `};
   ${mediaQueries(50)`
     width:calc(60vw);
 

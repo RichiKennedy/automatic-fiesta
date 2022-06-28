@@ -7,7 +7,7 @@ import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
 import { motion } from "framer-motion";
-import CVpdf from "../assets/CV/RichardGKennedy_CV2.pdf";
+import CVpdf from "../assets/CV/RichardKennedyCV_CV.pdf";
 import { mediaQueries } from "./Themes";
 
 const MainContainer = styled.div`
@@ -250,7 +250,7 @@ const Main = () => {
           <Contact
             click={+false}
             target="_blank"
-            to={{ pathname: "richardgrahamkennedy@gmail.com" }}
+            to={{ pathname: "mailto:richardgrahamkennedy@gmail.com" }}
           >
             <motion.h3
               initial={{
