@@ -6,7 +6,7 @@ import { mediaQueries } from "../components/Themes";
 const Container = styled.div`
   position: relative;
 
-  ${mediaQueries(45)`
+  ${mediaQueries(65)`
     
     display:none;
 

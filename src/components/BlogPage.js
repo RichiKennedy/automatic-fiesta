@@ -18,9 +18,14 @@ const MainContainer = styled(motion.div)`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  /* background: ${(props) => props.theme.body};
+  width: 100vw;
+
+  overflow: hidden;
+  position: relative; */
 `;
 const Container = styled.div`
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.5)`};
+  background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.7)`};
   width: 100%;
   height: auto;
   position: relative;

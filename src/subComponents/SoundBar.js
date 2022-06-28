@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
-import music from "../assets/audio/u-said-it-v13-1167.mp3";
+import music from "../assets/audio/Khruangbin.mp3";
+import { mediaQueries } from "../components/Themes";
 
 const Box = styled.div`
   display: flex;
@@ -25,6 +26,12 @@ const Box = styled.div`
   & > *:nth-child(4) {
     animation-delay: 0.7s;
   }
+
+  ${mediaQueries(40)`
+      left:1rem;
+top:10rem;
+
+  `};
 `;
 
 const play = keyframes`
@@ -48,6 +55,12 @@ const Line = styled.span`
   height: 1rem;
   width: 1.5px;
   margin: 0 0.1rem;
+
+  ${mediaQueries(40)`
+      height:0.5rem;
+      width:1px;
+
+  `};
 `;
 
 const SoundBar = () => {

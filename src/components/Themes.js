@@ -34,6 +34,7 @@ export const DarkTheme = {
 //new pinkish
 //rgb(255, 243, 250)
 export const breakpoints = {
+  xs: 15,
   sm: 20, //em
   md: 30,
   lg: 45,
