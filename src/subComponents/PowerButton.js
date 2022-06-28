@@ -23,16 +23,17 @@ const Power = styled.button`
   z-index: 3;
 
   cursor: pointer;
+
   .svg {
-    text-decoration: none;
+    color: #000000;
   }
+
   &:hover {
     background-color: rgba(0, 255, 0, 0.4);
     box-shadow: 0 0 8px 6px rgba(0, 255, 0, 0.2);
   }
 
   & > *:first-child {
-    text-decoration: none;
     color: inherit;
   }
 
@@ -45,12 +46,15 @@ const Power = styled.button`
       }
 
   `};
+  .link {
+    color: #000000;
+  }
 `;
 
 const PowerButton = () => {
   return (
     <Power>
-      <NavLink to="/">
+      <NavLink to="/" className="link">
         <PowerBtn className="svg" width={25} height={25} fill="currentColor" />
       </NavLink>
     </Power>
