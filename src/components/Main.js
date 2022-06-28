@@ -127,18 +127,15 @@ const Center = styled.button`
   justify-content: center;
   flex-direction: column;
   transition: all 1s ease;
-  .yinyang {
-    text-decoration: none;
-  }
-  span {
-    text-decoration: none;
-  }
+
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
+    text-decoration: none;
   }
   & > :last-child {
     display: ${(props) => (props.click ? "none" : "inline-block ")};
     padding-top: 1rem;
+    text-decoration: none;
   }
 
   @media only screen and (max-width: 50em) {
