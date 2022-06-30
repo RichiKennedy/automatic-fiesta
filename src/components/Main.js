@@ -128,6 +128,12 @@ const Center = styled.button`
   flex-direction: column;
   transition: all 1s ease;
 
+  .yinyang {
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+  }
+
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
     text-decoration: none;
@@ -208,7 +214,7 @@ const Main = () => {
         ) : (
           <SocialIcons theme={click ? "dark" : "light"} />
         )}
-        <Center click={click}>
+        <Center click={+click}>
           {mq ? (
             <YinYang
               className="yinyang"
@@ -225,7 +231,6 @@ const Main = () => {
               fill="currentColor"
             />
           )}
-
           <span>click here</span>
         </Center>
         {mq ? (
