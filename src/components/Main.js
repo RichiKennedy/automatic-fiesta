@@ -128,6 +128,11 @@ const Center = styled.button`
   flex-direction: column;
   transition: all 1s ease;
 
+  button {
+    color: transparent;
+    text-decoration: none;
+  }
+
   .yinyang {
     color: inherit;
     text-decoration: none;
