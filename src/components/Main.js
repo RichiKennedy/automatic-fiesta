@@ -127,16 +127,17 @@ const Center = styled.button`
   justify-content: center;
   flex-direction: column;
   transition: all 1s ease;
-
-  button {
-    color: transparent;
-    text-decoration: none;
-  }
+  color: #000000;
 
   .yinyang {
     color: inherit;
     text-decoration: none;
     list-style: none;
+    color: #000000;
+  }
+
+  span {
+    color: #000000;
   }
 
   & > :first-child {
