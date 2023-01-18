@@ -4,7 +4,6 @@ import { lightTheme, mediaQueries } from "./Themes";
 import { Design, Develope } from "./AllSvgs";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
-import LogoComponent from "../subComponents/LogoComponent";
 import ParticleComponents from "../subComponents/ParticleComponents";
 import BigTitle from "../subComponents/BigTitle";
 const Box = styled.div`
@@ -147,7 +146,6 @@ const MySkillsPage = () => {
   return (
     <ThemeProvider theme={lightTheme}>
       <Box>
-        <LogoComponent theme="light" />
         <PowerButton />
         <SocialIcons theme="light" />
         <ParticleComponents theme="light" />
@@ -183,14 +181,14 @@ const MySkillsPage = () => {
           <Description>
             <strong> Skills </strong>
             <p>
-              HTML5, CSS3, SASS, Javascript, React, Tailwind
+              Javascript, React, React-Hooks, Tailwind, Next.JS, Accessability,
               <br />
               Styled-Components, MongoDB, SEO
             </p>
           </Description>
           <Description>
             <strong> Tools </strong>
-            <p>VScode, Github, Codepen</p>
+            <p>VScode, Github, Jest, Bitbucket</p>
           </Description>
         </Main>
         <BigTitle text="SKILLS" top="80%" right="2%" />

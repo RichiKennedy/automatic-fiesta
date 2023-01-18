@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Github } from "./AllSvgs";
 import { mediaQueries } from "./Themes";
 
-const Box = styled(motion(NavLink))`
+const Box = styled.div`
   width: calc(12.5rem + 15vw);
   text-decoration: none;
   height: 23.5rem;
@@ -15,7 +15,6 @@ const Box = styled(motion(NavLink))`
   backdrop-filter: blur(2px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
-
   display: flex;
   flex-direction: column;
   z-index: 5;
@@ -34,13 +33,11 @@ const Box = styled(motion(NavLink))`
 
   `};
   ${mediaQueries(30)`
-    
     height:22rem;
 
   `};
 
   ${mediaQueries(25)`
-    
     height:20rem;
     padding:0.8rem;
     backdrop-filter: none;
@@ -71,11 +68,6 @@ const Title = styled.h3`
   font-family: "Karla", sans-serif;
   font-weight: 700;
   border-bottom: 1px solid ${(props) => props.theme.text};
-  ${mediaQueries(35)`
-    
-    font-size:calc(0.5em + 1vw);
-
-  `};
   ${Box}:hover & {
     border-bottom: 1px solid ${(props) => props.theme.body};
   }
@@ -83,42 +75,26 @@ const Title = styled.h3`
 const Description = styled.h4`
   font-weight: 400;
   padding: 0.5rem 0;
-
-  ${mediaQueries(25)`
-    
-    font-size:calc(0.5em + 1vw);
-
-
-
-  `};
 `;
 const HashTags = styled.div`
   padding: 0.5rem 0;
-  ${mediaQueries(35)`
-    
-    font-size:calc(0.4em + 1vw);
-
-
-
-  `};
 `;
 const Tag = styled.span`
   padding-right: 0.5rem;
 `;
 const Date = styled.span`
   padding: 0.5rem 0;
-
-  ${mediaQueries(35)`
-    
-    font-size:calc(0.4em + 1vw);
-
-
-
-  `};
 `;
 const Footer = styled.footer`
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  border: 1px solid ${(props) => props.theme.text};
+  border-radius: 0 0 0 50px;
+
+  ${Box}:hover & {
+    border: 1px solid ${(props) => props.theme.body};
+  }
 `;
 
 const Link = styled(NavLink)`
@@ -132,18 +108,10 @@ const Link = styled(NavLink)`
     background-color: ${(props) => props.theme.body};
     color: ${(props) => props.theme.text};
   }
-
-  ${mediaQueries(35)`
-    
-    font-size:calc(0.4em + 1vw);
-    padding: 0.5rem calc(1.5rem + 1.5vw);
-
-
-
-  `};
 `;
 
 const Git = styled(NavLink)`
+  padding-right: 5px;
   color: inherit;
   text-decoration: none;
   ${Box}:hover & {
@@ -174,7 +142,7 @@ const BlogComponent = (props) => {
     props.blog;
   return (
     <Container variants={Item}>
-      <Box target="_blank" to={{ pathname: link }}>
+      <Box>
         <Image img={imgSrc} />
         <Title>{name}</Title>
         <Description>{description}</Description>

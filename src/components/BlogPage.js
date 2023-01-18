@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import img from "../assets/Images/pinkBG.jpg";
-import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import { mediaQueries } from "./Themes";
-
 import { Blogs } from "../data/BlogData";
 import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/Anchor";
@@ -13,16 +11,11 @@ import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
 
 const MainContainer = styled(motion.div)`
-  background-image: url(${img});
+  background: ${(props) => props.theme.body};
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  /* background: ${(props) => props.theme.body};
-  width: 100vw;
-
-  overflow: hidden;
-  position: relative; */
 `;
 const Container = styled.div`
   background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.7)`};
@@ -40,8 +33,6 @@ const Center = styled.div`
 
   ${mediaQueries(30)`
     padding-top: 7rem;
-    
-  
   `};
 `;
 
@@ -52,9 +43,6 @@ const Grid = styled.div`
 
   ${mediaQueries(50)`
     grid-template-columns: 100%;
-
-    
-  
   `};
 `;
 
@@ -90,7 +78,6 @@ const BlogPage = () => {
       }}
     >
       <Container>
-        <LogoComponent />
         <PowerButton />
         <SocialIcons />
         <AnchorComponent number={number} />
