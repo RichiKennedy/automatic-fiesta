@@ -70,7 +70,7 @@ export const Blogs = [
     github: "https://github.com/RichiKennedy/MyPortfolio",
   },
   {
-    id: 5,
+    id: 6,
     name: "Space Shooter",
     description:
       " Built using Phaser.js, classic arcade style, space invaders game. Avoid invaders and collect points to enter diffirent levels ",

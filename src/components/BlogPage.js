@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import { mediaQueries } from "./Themes";
 import { Blogs } from "../data/BlogData";
 import BlogComponent from "./BlogComponent";
-import AnchorComponent from "../subComponents/Anchor";
 import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
 
@@ -17,7 +16,7 @@ const MainContainer = styled(motion.div)`
   background-position: center;
 `;
 const Container = styled.div`
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.7)`};
+  background-color: ${(props) => props.theme.body};
   width: 100%;
   height: auto;
   position: relative;
@@ -59,13 +58,6 @@ const container = {
 };
 
 const BlogPage = () => {
-  const [number, setNumber] = useState(0);
-
-  useEffect(() => {
-    let num = (window.innerHeight - 90) / 30;
-    setNumber(parseInt(num));
-  }, []);
-
   return (
     <MainContainer
       variants={container}
@@ -79,7 +71,6 @@ const BlogPage = () => {
       <Container>
         <PowerButton />
         <SocialIcons />
-        <AnchorComponent number={number} />
         <Center>
           <Grid>
             {Blogs.map((blog) => {
