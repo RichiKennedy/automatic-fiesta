@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Me from "../assets/Images/MyProject.png";
+import Me from "../assets/Images/bitmoji.png";
 import { motion } from "framer-motion";
 import { mediaQueries } from "./Themes";
 
@@ -43,23 +43,6 @@ const Box = styled(motion.div)`
   
   `};
 
-  ${mediaQueries(40)`
- 
-    
-  
-  `};
-
-  ${mediaQueries(30)`
-    
-    
-  
-  `};
-  ${mediaQueries(20)`
- 
-    
-  
-  `};
-
   @media only screen and (max-width: 50em) {
     background: none;
     border: none;
@@ -77,8 +60,6 @@ const Box = styled(motion.div)`
     background-position: 0 0, 100% 0;
     background-repeat: no-repeat;
   }
-
-  //height:55vh;
 `;
 
 const SubBox = styled.div`
@@ -91,55 +72,33 @@ const SubBox = styled.div`
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    width: 90%;
+    width: 550px;
     height: auto;
   }
-
-  ${mediaQueries(60)`
-  
-  .myPic {
-
-width: 90%;
-
-}
-
-`};
 
   ${mediaQueries(50)`
       width: 100%;
     height: 100%;
       .myPic {
+        width: 350px;
   `};
 
-  ${mediaQueries(40)`
-  
-      .myPic {
-    
-    width: 60%;
-    
+  ${mediaQueries(40)` 
+      .myPic {   
+    width: 330px;
   }
-
   `};
 
   ${mediaQueries(30)`
-     
-
       .myPic {
-    
-    width: 75%;
-    
+    width: 350px;
   }
-
   `};
+
   ${mediaQueries(20)`
-     
-
      .myPic {
-   
    width: 85%;
-   
  }
-
  `};
 `;
 
@@ -157,22 +116,19 @@ const Text = styled.div`
     font-size: calc(1rem + 0.7vw);
     font-weight: 300;
 
+    ${mediaQueries(60)`
+        justify-content: space-around;
+  `};
     ${mediaQueries(40)`
         font-size: calc(0.5rem + 1vw);
-
-
   `};
   }
   ${mediaQueries(40)`
         font-size: calc(1rem + 1.5vw);
-
-
   `};
+
   ${mediaQueries(20)`
          padding: 1rem;
-
-
-
   `};
 `;
 
@@ -197,7 +153,9 @@ const Intro = () => {
       <SubBox>
         <Text>
           <h1>Hello,</h1>
-          <h2>I'm Richi Kennedy.</h2>
+          <h2>
+            I'm <br /> Richi Kennedy.
+          </h2>
           <h3>A Frontend developer intern at Mobiento / Deloitte Digital.</h3>
         </Text>
       </SubBox>
