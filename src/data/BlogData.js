@@ -13,6 +13,18 @@ export const Blogs = [
   },
   {
     id: 1,
+    name: "Masonry Grid Layout",
+    description:
+      "The famous grid layout used by powerhouse companies such as, Unsplash, Pinterest",
+    tags: ["Vanilla Javascript"],
+    date: "19 Dec, 2022",
+    imgSrc: "website/Masonry.png",
+    link: "",
+    demo: "https://unique-cocada.netlify.app/",
+    github: "https://github.com/RichiKennedy/Masonry-layout",
+  },
+  {
+    id: 2,
     name: "3D Whack-a-crab",
     description:
       "A 3D game using A-Frame (Three.js Framework). Brief was to build an interactive game for Hypers Exploring Code module ",
@@ -24,7 +36,7 @@ export const Blogs = [
     github: "https://github.com/RichiKennedy/3D-Smash-Crab",
   },
   {
-    id: 2,
+    id: 3,
     name: "2D Whack-a-crab",
     description:
       "A 2D game using Vanilla Javascript. A random crab will appear and you have to slap it to gain points",
@@ -47,7 +59,7 @@ export const Blogs = [
     github: "https://github.com/RichiKennedy/ecommerce-team-project",
   },
   {
-    id: 8,
+    id: 5,
     name: "A portfolio ",
     description:
       "The first portfolio I created for myself. Recently had an upgrade, tho thought it would be nice to share ",
@@ -56,16 +68,6 @@ export const Blogs = [
     imgSrc: "website/Port.png",
     demo: "https://kennedyrich.netlify.app/index.html",
     github: "https://github.com/RichiKennedy/MyPortfolio",
-  },
-  {
-    id: 3,
-    name: "Surfboard Shop",
-    description:
-      "Ecommerce surfboard shop (MERN). Currently being finished for deployment",
-    tags: ["react", "styled-components", "MongoDB", "RestAPI", "Node.js"],
-    date: "31 March, 2022",
-    imgSrc: "website/E-commerce.png",
-    github: "https://github.com/RichiKennedy/DataInteraction-design",
   },
   {
     id: 5,
@@ -79,7 +81,7 @@ export const Blogs = [
     github: "https://github.com/RichiKennedy/Space-game",
   },
   {
-    id: 6,
+    id: 7,
     name: "Personality Test",
     description:
       "This fun quiz asks you questions and from your answers, compares you to the likes of some dangerouse people",
@@ -91,7 +93,7 @@ export const Blogs = [
   },
 
   {
-    id: 7,
+    id: 8,
     name: "Otto Tattoo Studio",
     description:
       "My very first project at Hyper Island, to create a functional website. I chose to build my friend a portfolio",
