@@ -6,7 +6,7 @@ import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
 import { motion } from "framer-motion";
-import CVpdf from "../assets/CV/RichardKennedyCV_CV.pdf";
+import CVpdf from "../assets/CV/RichardKennedy__CV.pdf";
 import { mediaQueries } from "./Themes";
 
 const MainContainer = styled.div`

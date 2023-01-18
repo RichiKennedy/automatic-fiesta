@@ -1,12 +1,10 @@
 import React from "react";
-import styled, { keyframes, ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import BigTitle from "../subComponents/BigTitle";
 import ParticleComponents from "../subComponents/ParticleComponents";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import { DarkTheme, mediaQueries } from "./Themes";
-
-import astronaut from "../assets/Images/spaceman.png";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -15,26 +13,6 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-const float = keyframes`
-0% { transform: translateY(-10px)}
-50% { transform: translateY(15px) translateX(15px)}
-100% { transform: translateY(-10px)}
-
-`;
-
-const Spaceman = styled.div`
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  width: 20vw;
-  animation: ${float} 4s ease infinite;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
 `;
 
 const Main = styled.div`
@@ -52,29 +30,22 @@ const Main = styled.div`
   backdrop-filter: blur(4px);
   font-family: "Ubuntu", monospace;
 
-  ${mediaQueries(85)`
-         
+  ${mediaQueries(85)`      
          height: 60vh;
-
-
   `};
+
   ${mediaQueries(30)`
           width: 50vw;
           height: 50vh;
           backdrop-filter: none;
           margin-top:2rem;
           font-size: calc(0.4rem + 1vw);
-
   `};
 
   ${mediaQueries(20)`
           padding: 1rem;
           font-size: calc(0.4rem + 1vw);
   `};
-
-  /* position: absolute; */
-  /* left: calc(5rem + 5vw);
-  top: 10rem; */
 `;
 
 const AboutPage = () => {
@@ -89,10 +60,6 @@ const AboutPage = () => {
         <SocialIcons theme="dark" />
         <PowerButton />
         <ParticleComponents theme="dark" />
-
-        <Spaceman>
-          <img src={astronaut} alt="" />
-        </Spaceman>
         <Main>
           I'm an Australian Frontend Developer living in Stockholm, Sweden.
           currently I am an intern at Mobiento / Deloitte Digital and set to
