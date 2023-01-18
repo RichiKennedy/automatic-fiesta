@@ -138,8 +138,7 @@ const Item = {
 };
 
 const BlogComponent = (props) => {
-  const { name, tags, date, imgSrc, link, description, demo, github } =
-    props.blog;
+  const { name, tags, date, imgSrc, description, demo, github } = props.blog;
   return (
     <Container variants={Item}>
       <Box>
