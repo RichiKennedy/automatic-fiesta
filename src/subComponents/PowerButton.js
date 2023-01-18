@@ -21,7 +21,6 @@ const Power = styled.button`
   justify-content: center;
   align-items: center;
   z-index: 3;
-
   cursor: pointer;
 
   .svg {

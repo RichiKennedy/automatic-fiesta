@@ -15,8 +15,5 @@ const GlobalStyle = createGlobalStyle`
      overflow-x: hidden;
      font-family: 'Source Sans Pro', sans-serif ;
  }
-
-
-
  `;
 export default GlobalStyle;

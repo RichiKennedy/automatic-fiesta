@@ -109,11 +109,6 @@ width: 90%;
       width: 100%;
     height: 100%;
       .myPic {
-    
-    width: 45%
-    
-  }
-
   `};
 
   ${mediaQueries(40)`
@@ -203,10 +198,7 @@ const Intro = () => {
         <Text>
           <h1>Hello,</h1>
           <h2>I'm Richi Kennedy.</h2>
-          <h3>
-            A Frontend developer student from Australia living in Stockholm,
-            Sweden.
-          </h3>
+          <h3>A Frontend developer intern at Mobiento / Deloitte Digital.</h3>
         </Text>
       </SubBox>
       <SubBox>

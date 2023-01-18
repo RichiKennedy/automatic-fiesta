@@ -7,8 +7,8 @@ const Box = styled.div`
   display: flex;
   cursor: pointer;
   position: fixed;
-  left: 8rem;
-  top: 3rem;
+  left: 1.4rem;
+  top: 2.4rem;
   z-index: 10;
 
   & > *:nth-child(1) {
@@ -26,12 +26,6 @@ const Box = styled.div`
   & > *:nth-child(4) {
     animation-delay: 0.7s;
   }
-
-  ${mediaQueries(40)`
-      left:1rem;
-top:10rem;
-
-  `};
 `;
 
 const play = keyframes`
@@ -55,12 +49,6 @@ const Line = styled.span`
   height: 1rem;
   width: 1.5px;
   margin: 0 0.1rem;
-
-  ${mediaQueries(40)`
-      height:0.5rem;
-      width:1px;
-
-  `};
 `;
 
 const SoundBar = () => {

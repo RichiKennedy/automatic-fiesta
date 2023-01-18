@@ -1,5 +1,17 @@
 export const Blogs = [
   {
+    id: 0,
+    name: "Unsplash Clone",
+    description:
+      "An Unsplash clone built with React. Featuring the Unspash websites core functionalities",
+    tags: ["React", "Typescript", "tailwind", "Jest"],
+    date: "18 Jan, 2023",
+    imgSrc: "website/Unsplash-img.png",
+    link: "",
+    demo: "https://unsplash-qfu57jeuc-richikennedy.vercel.app/",
+    github: "https://github.com/RichiKennedy/Unsplash",
+  },
+  {
     id: 1,
     name: "3D Whack-a-crab",
     description:
@@ -31,7 +43,6 @@ export const Blogs = [
     tags: ["react", "TailWind", "MongoDB", "RestAPI", "Node.js"],
     date: "5 May, 2022",
     imgSrc: "website/Happening.png",
-
     demo: "benciantar-happening.netlify.app/",
     github: "https://github.com/RichiKennedy/ecommerce-team-project",
   },
@@ -43,7 +54,6 @@ export const Blogs = [
     tags: ["HTML", "CSS", "Javascript"],
     date: "26 May, 2021",
     imgSrc: "website/Port.png",
-
     demo: "https://kennedyrich.netlify.app/index.html",
     github: "https://github.com/RichiKennedy/MyPortfolio",
   },
@@ -55,7 +65,6 @@ export const Blogs = [
     tags: ["react", "styled-components", "MongoDB", "RestAPI", "Node.js"],
     date: "31 March, 2022",
     imgSrc: "website/E-commerce.png",
-
     github: "https://github.com/RichiKennedy/DataInteraction-design",
   },
   {
@@ -66,7 +75,6 @@ export const Blogs = [
     tags: ["Javascript", "Phaser.js"],
     date: "3 Dec, 2021",
     imgSrc: "website/SpaceShooter.png",
-
     demo: "https://keen-booth-13eb9b.netlify.app/",
     github: "https://github.com/RichiKennedy/Space-game",
   },
@@ -78,7 +86,6 @@ export const Blogs = [
     tags: ["HTML", "CSS", "Javascript", "JSON", "SVGanimations", "Firebase"],
     date: "11 Nov, 2021",
     imgSrc: "website/personality.png",
-
     demo: "https://richikennedy.github.io/killer-quiz/",
     github: "https://github.com/RichiKennedy/killer-quiz",
   },
@@ -91,7 +98,6 @@ export const Blogs = [
     tags: ["HTML", "CSS", "Javascript"],
     date: "8 Oct, 2021",
     imgSrc: "website/Otto.png ",
-
     demo: "https://richikennedy.github.io/Otto_Studios/",
     github: "https://github.com/RichiKennedy/Otto_Studios",
   },
