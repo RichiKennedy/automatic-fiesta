@@ -15,20 +15,20 @@ const Box = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  ${mediaQueries(50)`
-            flex-direction:column-reverse;  
-            padding:8rem 0;
-height:auto;
-            &>*:nth-child(5){
-              margin-top:5rem;
-            }
+  ${mediaQueries(80)`
+    flex-direction:column-reverse; 
+    gap: 20px;
+    padding:8rem 0;
+    height:auto;
+    &>*:nth-child(5){
+    margin-top:5rem;
+    }
            
   `};
-  ${mediaQueries(30)`
-           
-            &>*:nth-child(5){
-              margin-top:4rem;
-            }
+  ${mediaQueries(30)`       
+    &>*:nth-child(5){
+    margin-top:4rem;
+    }
            
   `};
 `;
@@ -48,13 +48,21 @@ const Main = styled.div`
   flex-direction: column;
   font-family: "Ubuntu Mono", monospace;
 
-  ${mediaQueries(60)`
-            height: 55vh;
+  ${mediaQueries(80)`
+    height: 55vh;
+    width: 75vh;
+    transform: translateY(-100px);
   `};
 
   ${mediaQueries(50)`
-              width: 50vw;
-              height: max-content;
+    width: 70vw;
+    height: max-content;
+    transform: translateX(30px);
+
+  `};
+  ${mediaQueries(40)`
+    width: 55vw;
+    transform: translateX(30px);
 
   `};
 
@@ -71,23 +79,24 @@ const Title = styled.h2`
   font-size: calc(1em + 1vw);
 
   ${mediaQueries(60)`
-          font-size:calc(0.8em + 1vw);
+    font-size:calc(0.8em + 1vw);
   `};
 
   ${mediaQueries(50)`
-          font-size:calc(1em + 2vw);
-          margin-bottom:1rem;
+    font-size:calc(1em + 1vw);
+    margin-bottom:1rem;
   `};
 
   ${mediaQueries(30)`
-                      font-size:calc(1em + 1vw);
+    font-size:calc(1em + 1vw);
   `};
+
   ${mediaQueries(25)`
-                      font-size:calc(0.8em + 1vw);
-                      svg{
-                        width:30px;
-                        height:30px;
-                      }
+    font-size:calc(0.8em + 1vw);
+    svg{
+    width:30px;
+    height:30px;
+    }
   `};
 
   ${Main}:hover & {
@@ -105,26 +114,19 @@ const Description = styled.div`
   font-size: calc(0.7em + 1vw);
   padding: 0.5rem 0;
   font-weight: 300;
-
   width: 100%;
 
   ${mediaQueries(50)`
-            font-size: calc(0.6em + 1vw);
+    font-size: calc(0.6em + 1vw);
 
   `};
 
   ${mediaQueries(30)`
-                      font-size:calc(0.5em + 1vw);
-
-              
-
+    font-size:calc(0.5em + 1vw);
   `};
 
   ${mediaQueries(25)`
-                      font-size:calc(0.4em + 1vw);
-
-              
-
+    font-size:calc(0.4em + 1vw);
   `};
 
   ${Main}:hover & {

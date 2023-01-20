@@ -36,7 +36,7 @@ const Main = styled.div`
 
   ${mediaQueries(30)`
           width: 50vw;
-          height: 50vh;
+          height: 60vh;
           backdrop-filter: none;
           margin-top:2rem;
           font-size: calc(0.4rem + 1vw);
@@ -44,7 +44,7 @@ const Main = styled.div`
 
   ${mediaQueries(20)`
           padding: 1rem;
-          font-size: calc(0.4rem + 1vw);
+          font-size: calc(0.4rem + 1vw);        
   `};
 `;
 
