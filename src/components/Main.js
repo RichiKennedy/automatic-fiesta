@@ -50,7 +50,7 @@ const Contact = styled(NavLink)`
   text-decoration: none;
   z-index: 1;
 `;
-const BLOG = styled(NavLink)`
+const PROJECTS = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 50%;
@@ -279,7 +279,11 @@ const Main = () => {
         )}
 
         {mq ? (
-          <BLOG click={+click} onClick={() => setpath("blog")} to="/blog">
+          <PROJECTS
+            click={+click}
+            onClick={() => setpath("projects")}
+            to="/projects"
+          >
             <motion.h2
               initial={{
                 y: -200,
@@ -294,9 +298,13 @@ const Main = () => {
             >
               Projects
             </motion.h2>
-          </BLOG>
+          </PROJECTS>
         ) : (
-          <BLOG click={+false} onClick={() => setpath("blog")} to="/blog">
+          <PROJECTS
+            click={+false}
+            onClick={() => setpath("projects")}
+            to="/projects"
+          >
             <motion.h2
               initial={{
                 y: -200,
@@ -311,7 +319,7 @@ const Main = () => {
             >
               Projects
             </motion.h2>
-          </BLOG>
+          </PROJECTS>
         )}
 
         <Resume click={+click}>

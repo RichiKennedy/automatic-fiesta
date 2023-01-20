@@ -1,9 +1,9 @@
-export const Blogs = [
+export const Projects = [
   {
     id: 0,
     name: "Unsplash Clone",
     description:
-      "An Unsplash clone built with React. Featuring the Unspash websites core functionalities",
+      "An Unsplash clone built with React and Typescript. Featuring the Unspash websites core functionalities",
     tags: ["React", "Typescript", "tailwind", "Jest"],
     date: "18 Jan, 2023",
     imgSrc: "website/Unsplash-img.png",
