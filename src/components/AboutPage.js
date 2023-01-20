@@ -13,6 +13,12 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${mediaQueries(30)`
+    justify-content: flex-end;
+    align-items: start;
+    padding-right: 10px;       
+  `};
 `;
 
 const Main = styled.div`
@@ -35,11 +41,12 @@ const Main = styled.div`
   `};
 
   ${mediaQueries(30)`
-          width: 50vw;
-          height: 60vh;
-          backdrop-filter: none;
+          width: 67vw;
+          height: auto;
+          backdrop-filter: blur;
           margin-top:2rem;
-          font-size: calc(0.4rem + 1vw);
+          font-size: calc(0.5rem + 1vw);
+          transform: translateY(50px);       
   `};
 
   ${mediaQueries(20)`
