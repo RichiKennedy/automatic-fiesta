@@ -181,9 +181,10 @@ const MySkillsPage = () => {
           <Description>
             <strong> Skills </strong>
             <p>
-              Javascript, React, React-Hooks, Tailwind, Next.JS, Accessability,
+              Javascript, Typescript, React, React-Hooks, Tailwind, Next.JS,
+              Accessability,
               <br />
-              Styled-Components, MongoDB, SEO
+              Styled-Components, MongoDB, Firebase, SEO
             </p>
           </Description>
           <Description>

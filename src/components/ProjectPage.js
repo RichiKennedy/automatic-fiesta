@@ -3,8 +3,8 @@ import styled from "styled-components";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import { mediaQueries } from "./Themes";
-import { Blogs } from "../data/BlogData";
-import BlogComponent from "./BlogComponent";
+import { Projects } from "../data/ProjectData";
+import ProjectComponent from "./ProjectComponent";
 import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
 
@@ -57,7 +57,7 @@ const container = {
   },
 };
 
-const BlogPage = () => {
+const ProjectPage = () => {
   return (
     <MainContainer
       variants={container}
@@ -73,8 +73,8 @@ const BlogPage = () => {
         <SocialIcons />
         <Center>
           <Grid>
-            {Blogs.map((blog) => {
-              return <BlogComponent key={blog.id} blog={blog} />;
+            {Projects.map((project) => {
+              return <ProjectComponent key={project.id} project={project} />;
             })}
           </Grid>
         </Center>
@@ -84,4 +84,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
+export default ProjectPage;

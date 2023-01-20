@@ -137,8 +137,8 @@ const Item = {
   },
 };
 
-const BlogComponent = (props) => {
-  const { name, tags, date, imgSrc, description, demo, github } = props.blog;
+const ProjectComponent = (props) => {
+  const { name, tags, date, imgSrc, description, demo, github } = props.project;
   return (
     <Container variants={Item}>
       <Box>
@@ -164,4 +164,4 @@ const BlogComponent = (props) => {
   );
 };
 
-export default BlogComponent;
+export default ProjectComponent;
