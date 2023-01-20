@@ -97,7 +97,7 @@ const SubBox = styled.div`
 
   ${mediaQueries(40)` 
       .myPic {   
-    width: 350px;
+    width: 280px;
   }
   `};
 
