@@ -72,10 +72,22 @@ const SubBox = styled.div`
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    width: 550px;
+    width: 750px;
     height: auto;
   }
 
+  ${mediaQueries(110)`
+      width: 100%;
+    height: 100%;
+      .myPic {
+        width: 650px;
+  `};
+  ${mediaQueries(80)`
+      width: 100%;
+    height: 100%;
+      .myPic {
+        width: 500px;
+  `};
   ${mediaQueries(50)`
       width: 100%;
     height: 100%;
@@ -85,12 +97,6 @@ const SubBox = styled.div`
 
   ${mediaQueries(40)` 
       .myPic {   
-    width: 330px;
-  }
-  `};
-
-  ${mediaQueries(30)`
-      .myPic {
     width: 350px;
   }
   `};
