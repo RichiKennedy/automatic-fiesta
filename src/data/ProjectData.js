@@ -55,7 +55,7 @@ export const Projects = [
     tags: ["react", "TailWind", "MongoDB", "RestAPI", "Node.js"],
     date: "5 May, 2022",
     imgSrc: "website/Happening.png",
-    demo: "benciantar-happening.netlify.app/",
+    demo: "https://benciantar-happening.netlify.app/",
     github: "https://github.com/RichiKennedy/ecommerce-team-project",
   },
   {
