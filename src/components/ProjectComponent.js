@@ -7,9 +7,11 @@ import { mediaQueries } from "./Themes";
 
 const Box = styled.div`
   width: calc(12.5rem + 15vw);
+
   text-decoration: none;
   height: 23.5rem;
   padding: 1rem;
+  background-color: ${(props) => props.theme.white};
   color: ${(props) => props.theme.text};
   border: 2px solid ${(props) => props.theme.text};
   backdrop-filter: blur(2px);
@@ -19,7 +21,7 @@ const Box = styled.div`
   flex-direction: column;
   z-index: 5;
   &:hover {
-    color: ${(props) => props.theme.body};
+    color: ${(props) => props.theme.white};
     background-color: ${(props) => props.theme.text};
     transition: all 0.3s ease;
   }
@@ -53,7 +55,7 @@ const Image = styled.div`
   border: 1px solid transparent;
   background-position: center center;
   ${Box}:hover & {
-    border: 1px solid ${(props) => props.theme.body};
+    border: 1px solid ${(props) => props.theme.white};
     transform: scale(1.05);
     transition: all 0.3s ease;
   }
@@ -69,7 +71,7 @@ const Title = styled.h3`
   font-weight: 700;
   border-bottom: 1px solid ${(props) => props.theme.text};
   ${Box}:hover & {
-    border-bottom: 1px solid ${(props) => props.theme.body};
+    border-bottom: 1px solid ${(props) => props.theme.white};
   }
 `;
 const Description = styled.h4`
@@ -93,19 +95,19 @@ const Footer = styled.footer`
   border-radius: 0 0 0 50px;
 
   ${Box}:hover & {
-    border: 1px solid ${(props) => props.theme.body};
+    border: 1px solid ${(props) => props.theme.white};
   }
 `;
 
 const Link = styled(NavLink)`
   background-color: ${(props) => props.theme.text};
-  color: ${(props) => props.theme.body};
+  color: ${(props) => props.theme.white};
   text-decoration: none;
   padding: 0.5rem calc(2rem + 2vw);
   border-radius: 0 0 0 50px;
   font-size: calc(1em + 0.5vw);
   ${Box}:hover & {
-    background-color: ${(props) => props.theme.body};
+    background-color: ${(props) => props.theme.white};
     color: ${(props) => props.theme.text};
   }
 `;
@@ -116,7 +118,7 @@ const Git = styled(NavLink)`
   text-decoration: none;
   ${Box}:hover & {
     & > * {
-      fill: ${(props) => props.theme.body};
+      fill: ${(props) => props.theme.white};
     }
   }
 `;

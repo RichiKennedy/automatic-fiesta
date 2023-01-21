@@ -5,6 +5,7 @@ export const lightTheme = {
   pinkish: "rgb(255, 243, 250)",
   bodyRgba: "252, 246, 244",
   textRgba: "0,0,0",
+  white: "#FFFFFF",
 };
 export const DarkTheme = {
   body: "#000000",
