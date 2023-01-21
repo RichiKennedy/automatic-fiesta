@@ -9,11 +9,11 @@ import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
 
 const MainContainer = styled(motion.div)`
-  background: ${(props) => props.theme.body};
+  /* background: ${(props) => props.theme.text};
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center; */
 `;
 const Container = styled.div`
   background-color: ${(props) => props.theme.body};
