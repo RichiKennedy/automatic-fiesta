@@ -37,15 +37,14 @@ export const Projects = [
   },
   {
     id: 3,
-    name: "2D Whack-a-crab",
+    name: "Space Shooter",
     description:
-      "A 2D game using Vanilla Javascript. A random crab will appear and you have to slap it to gain points",
-    tags: ["HTML", "CSS", "Javascript"],
-    date: "4 June, 2021",
-    imgSrc: "website/crabSlap.png",
-
-    demo: "https://2d-crab-slap.netlify.app/",
-    github: "https://github.com/RichiKennedy/CrabSmash",
+      " Built using Phaser.js, classic arcade style, space invaders game. Avoid invaders and collect points to enter diffirent levels ",
+    tags: ["Javascript", "Phaser.js"],
+    date: "3 Dec, 2021",
+    imgSrc: "website/SpaceShooter.png",
+    demo: "https://keen-booth-13eb9b.netlify.app/",
+    github: "https://github.com/RichiKennedy/Space-game",
   },
   {
     id: 4,
@@ -71,14 +70,15 @@ export const Projects = [
   },
   {
     id: 6,
-    name: "Space Shooter",
+    name: "2D Whack-a-crab",
     description:
-      " Built using Phaser.js, classic arcade style, space invaders game. Avoid invaders and collect points to enter diffirent levels ",
-    tags: ["Javascript", "Phaser.js"],
-    date: "3 Dec, 2021",
-    imgSrc: "website/SpaceShooter.png",
-    demo: "https://keen-booth-13eb9b.netlify.app/",
-    github: "https://github.com/RichiKennedy/Space-game",
+      "A 2D game using Vanilla Javascript. A random crab will appear and you have to slap it to gain points",
+    tags: ["HTML", "CSS", "Javascript"],
+    date: "4 June, 2021",
+    imgSrc: "website/crabSlap.png",
+
+    demo: "https://2d-crab-slap.netlify.app/",
+    github: "https://github.com/RichiKennedy/CrabSmash",
   },
   {
     id: 7,
