@@ -6,7 +6,7 @@ export const Projects = [
       "An Unsplash clone built with React and Typescript. Featuring the Unspash websites core functionalities",
     tags: ["React", "Typescript", "tailwind", "Jest"],
     date: "18 Jan, 2023",
-    imgSrc: "website/Unsplash-img.png",
+    imgSrc: "website/Unsplash.png",
     link: "",
     demo: "https://unsplash-qfu57jeuc-richikennedy.vercel.app/",
     github: "https://github.com/RichiKennedy/Unsplash",
