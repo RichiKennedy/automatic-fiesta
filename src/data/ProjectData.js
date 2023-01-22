@@ -59,6 +59,17 @@ export const Projects = [
   },
   {
     id: 5,
+    name: "2D Whack-a-crab",
+    description:
+      "A 2D game using Vanilla Javascript. A random crab will appear and you have to slap it to gain points",
+    tags: ["HTML", "CSS", "Javascript"],
+    date: "4 June, 2021",
+    imgSrc: "website/crabSlap.png",
+    demo: "https://2d-crab-slap.netlify.app/",
+    github: "https://github.com/RichiKennedy/CrabSmash",
+  },
+  {
+    id: 6,
     name: "A portfolio ",
     description:
       "The first portfolio I created for myself. Recently had an upgrade, tho thought it would be nice to share ",
@@ -67,18 +78,6 @@ export const Projects = [
     imgSrc: "website/Port.png",
     demo: "https://kennedyrich.netlify.app/index.html",
     github: "https://github.com/RichiKennedy/MyPortfolio",
-  },
-  {
-    id: 6,
-    name: "2D Whack-a-crab",
-    description:
-      "A 2D game using Vanilla Javascript. A random crab will appear and you have to slap it to gain points",
-    tags: ["HTML", "CSS", "Javascript"],
-    date: "4 June, 2021",
-    imgSrc: "website/crabSlap.png",
-
-    demo: "https://2d-crab-slap.netlify.app/",
-    github: "https://github.com/RichiKennedy/CrabSmash",
   },
   {
     id: 7,
