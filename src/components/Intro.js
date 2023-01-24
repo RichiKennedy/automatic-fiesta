@@ -80,7 +80,7 @@ const SubBox = styled.div`
       width: 100%;
     height: 100%;
       .myPic {
-        width: 650px;
+        width: 600px;
   `};
   ${mediaQueries(80)`
       width: 100%;
