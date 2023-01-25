@@ -68,10 +68,9 @@ const AboutPage = () => {
         <PowerButton />
         <ParticleComponents theme="dark" />
         <Main>
-          I'm an Australian Frontend Developer living in Stockholm, Sweden.
-          currently I am an intern at Mobiento / Deloitte Digital and set to
-          graduate from HyperIsland's Frontend development, full-time diploma
-          program in Stockholm, Sweden
+          I'm a Frontend Developer living in Stockholm, Sweden. currently I'm an
+          intern at Mobiento / Deloitte Digital and set to graduate from Hyper
+          Island's Frontend development, full-time diploma program.
           <br />
           <br />
           Frontend is my passion, i'm completely obsessed. My personality in
@@ -81,8 +80,8 @@ const AboutPage = () => {
           opportunity to better my skills as a developer.
           <br />
           <br />
-          When im not coding, I enjoy snowboarding, surfing and coffee tasting
-          in the city. Currently I'm on the lookout for a junior fronted role to
+          When im not coding, I enjoy snowboarding, going for a coffee in the
+          city. Currently I'm on the lookout for a junior fronted role to
           kickstart my career as a Frontend developer.
         </Main>
         <BigTitle text="ABOUT" top="3%" right="2%" />
