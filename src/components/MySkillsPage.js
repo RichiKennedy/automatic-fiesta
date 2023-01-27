@@ -39,7 +39,7 @@ const Main = styled.div`
   background-color: ${(props) => props.theme.body};
   padding: 2rem;
   width: 30vw;
-  height: 70vh;
+  height: 80vh;
   z-index: 3;
   line-height: 1.5;
   display: flex;
