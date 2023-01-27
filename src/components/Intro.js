@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Me from "../assets/Images/bitmoji.png";
+import Me from "../assets/Images/MyProject.png";
 import { motion } from "framer-motion";
 import { mediaQueries } from "./Themes";
 
@@ -72,7 +72,7 @@ const SubBox = styled.div`
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    width: 750px;
+    width: 55vh;
     height: auto;
   }
 
@@ -80,25 +80,20 @@ const SubBox = styled.div`
       width: 100%;
     height: 100%;
       .myPic {
-        width: 600px;
+        width: 450px;
   `};
   ${mediaQueries(80)`
       width: 100%;
     height: 100%;
       .myPic {
-        width: 500px;
+        width: 400px;
   `};
+
   ${mediaQueries(50)`
       width: 100%;
     height: 100%;
       .myPic {
-        width: 350px;
-  `};
-
-  ${mediaQueries(40)` 
-      .myPic {   
-    width: 280px;
-  }
+        width: 250px;
   `};
 
   ${mediaQueries(20)`
