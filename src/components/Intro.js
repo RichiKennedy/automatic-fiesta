@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Me from "../assets/Images/MyProject.png";
+import Me from "../assets/Images/image-5.png";
 import { motion } from "framer-motion";
 import { mediaQueries } from "./Themes";
 
@@ -37,7 +37,6 @@ const Box = styled(motion.div)`
     width: 70vw;
     height: 90vh
     background-size: 100% 2px;
-
     flex-direction:column;
     justify-content:space-between;
   
@@ -66,40 +65,44 @@ const SubBox = styled.div`
   position: relative;
   width: 50%;
   display: flex;
+  justify-content: end;
 
   .myPic {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    width: 55vh;
+    right: 0;
+    width: 420px;
     height: auto;
   }
 
-  ${mediaQueries(110)`
-      width: 100%;
-    height: 100%;
-      .myPic {
-        width: 450px;
-  `};
   ${mediaQueries(80)`
-      width: 100%;
-    height: 100%;
       .myPic {
-        width: 400px;
+        width: 420px;
+      }
+  `};
+  ${mediaQueries(70)`
+      .myPic {
+        width: 380px;
+      }
+  `};
+  ${mediaQueries(60)`
+      .myPic {
+        width: 320px;
+      }
   `};
 
   ${mediaQueries(50)`
-      width: 100%;
+    width: 100%;
     height: 100%;
       .myPic {
         width: 250px;
+      }
   `};
 
   ${mediaQueries(20)`
      .myPic {
-   width: 85%;
- }
+       width: 85%;
+     }
  `};
 `;
 
