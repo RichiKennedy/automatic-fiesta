@@ -7,7 +7,6 @@ import GlobalStyle from "./globalStyles";
 import Main from "./components/Main";
 import AboutPage from "./components/AboutPage";
 import ProjectPage from "./components/ProjectPage";
-
 import { AnimatePresence } from "framer-motion";
 import SoundBar from "./subComponents/SoundBar";
 
