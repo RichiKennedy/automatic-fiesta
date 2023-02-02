@@ -5,16 +5,9 @@ import PowerButton from "../subComponents/PowerButton";
 import { mediaQueries } from "./Themes";
 import { Projects } from "../data/ProjectData";
 import ProjectComponent from "./ProjectComponent";
-import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
 
-const MainContainer = styled(motion.div)`
-  /* background: ${(props) => props.theme.text};
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; */
-`;
+const MainContainer = styled(motion.div)``;
 const Container = styled.div`
   background-color: ${(props) => props.theme.body};
   width: 100%;
@@ -78,7 +71,6 @@ const ProjectPage = () => {
             })}
           </Grid>
         </Center>
-        <BigTitle text="Projects" top="5rem" left="5rem" />
       </Container>
     </MainContainer>
   );
