@@ -7,7 +7,6 @@ import { mediaQueries } from "./Themes";
 
 const Box = styled.div`
   width: calc(12.5rem + 15vw);
-
   text-decoration: none;
   height: 23.5rem;
   padding: 1rem;
@@ -47,13 +46,14 @@ const Box = styled.div`
   `};
 `;
 
-const Image = styled.div`
+const Image = styled(NavLink)`
   background-image: ${(props) => `url(${props.img})`};
   width: 100%;
   height: 70%;
   background-size: cover;
   border: 1px solid transparent;
   background-position: center center;
+  cursor: pointer;
   ${Box}:hover & {
     border: 1px solid ${(props) => props.theme.white};
     transform: scale(1.05);
@@ -144,7 +144,7 @@ const ProjectComponent = (props) => {
   return (
     <Container variants={Item}>
       <Box>
-        <Image img={imgSrc} />
+        <Image img={imgSrc} to={{ pathname: `${demo}` }} target="_blank" />
         <Title>{name}</Title>
         <Description>{description}</Description>
         <HashTags>

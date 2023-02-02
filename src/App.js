@@ -7,7 +7,6 @@ import GlobalStyle from "./globalStyles";
 import Main from "./components/Main";
 import AboutPage from "./components/AboutPage";
 import ProjectPage from "./components/ProjectPage";
-import MySkillsPage from "./components/MySkillsPage";
 import { AnimatePresence } from "framer-motion";
 import SoundBar from "./subComponents/SoundBar";
 
@@ -24,7 +23,6 @@ function App() {
             <Route exact path="/" component={Main} />
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/projects" component={ProjectPage} />
-            <Route exact path="/skills" component={MySkillsPage} />
           </Switch>
         </AnimatePresence>
       </ThemeProvider>
