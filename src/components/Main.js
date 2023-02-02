@@ -121,6 +121,7 @@ const Center = styled.button`
 
   span {
     color: #000000;
+    transform: translateY(-15px);
   }
 
   & > :first-child {
@@ -217,7 +218,14 @@ const Main = () => {
               fill="currentColor"
             />
           )}
-          <span>click here</span>
+          <span
+            onClick={() => handleClick()}
+            width={click ? 120 : 200}
+            height={click ? 120 : 200}
+            fill="currentColor"
+          >
+            click here
+          </span>
         </Center>
         {mq ? (
           <Contact
