@@ -68,21 +68,21 @@ const AboutPage = () => {
         <PowerButton />
         <ParticleComponents theme="dark" />
         <Main>
-          I'm a Frontend Developer living in Stockholm, Sweden. currently I'm an
-          intern at Mobiento / Deloitte Digital and set to graduate from Hyper
-          Island's Frontend development, full-time diploma program.
+          Living in Stockholm, Sweden, I work as a front-end developer. I'm now
+          an intern at Mobiento/Deloitte Digital and about to complete the
+          full-time Frontend development diploma program at Hyper Island.
           <br />
           <br />
-          Frontend is my passion, i'm completely obsessed. My personality in
-          three words would be positive, passionate and inquisitive. I love to
-          be challenged and have a strong ability to work in teams and
-          independently, but most of all I am eager to learn and look for any
-          opportunity to better my skills as a developer.
+          My passion and total obsession is frontend. Positive, passionate, and
+          curious would best describe my personality. I thrive on challenges and
+          have a solid ability to work both independently and in teams, but most
+          of all, I am eager to learn and seek out every chance to advance my
+          development abilities.
           <br />
           <br />
-          When im not coding, I enjoy snowboarding, going for a coffee in the
-          city. Currently I'm on the lookout for a junior fronted role to
-          kickstart my career as a Frontend developer.
+          Because I place a lot of importance on preserving a good work-life
+          balance, when I'm not coding, I like to go skiing, explore new places,
+          and have coffee with friends in the city.
         </Main>
         <BigTitle text="ABOUT" top="3%" right="2%" />
       </Box>
