@@ -18,6 +18,10 @@ const Box = styled.div`
     justify-content: flex-end;
     align-items: start; 
   `};
+  ${mediaQueries(25)`
+     justify-content: center;
+    
+  `};
 `;
 
 const Main = styled.div`
@@ -54,12 +58,11 @@ const Main = styled.div`
   `};
 
   ${mediaQueries(25)`
-   width: 100%;
+          width: 90%;
           height: 40vh;
           padding: 1rem;
-          font-size: calc(0.4rem + 1vw);    
-          background-color: red;  
-          paddong: 0px;  
+          font-size: calc(0.4rem + 1vw);
+          margin-right: 0px;    
   `};
 `;
 
@@ -76,16 +79,17 @@ const AboutPage = () => {
         <PowerButton />
         <ParticleComponents theme="dark" />
         <Main>
-          Living in Stockholm, Sweden, I work as a front-end developer. I'm now
-          an intern at Mobiento/Deloitte Digital and about to complete the
-          full-time Frontend development diploma program at Hyper Island.
+          I'm a front-end developer living in Stockholm, Sweden. My full-time
+          Frontend programming diploma program at Hyper Island is soon to come
+          to an end, and I'm currently an intern at Mobiento/Deloitte Digital.
           <br />
           <br />
-          My passion and total obsession is frontend. Positive, passionate, and
-          curious would best describe my personality. I thrive on challenges and
-          have a solid ability to work both independently and in teams, but most
-          of all, I am eager to learn and seek out every chance to advance my
-          development abilities.
+          Frontend development is my absolute passion and devotion. I would
+          define myself as enthusiastic, positive, and inquisitive. I enjoy a
+          challenge and work well both independently and in teams, but what sets
+          me apart from other candidates is my eagerness to learn and my desire
+          to take advantage of every opportunity to improve my development
+          skills.
           <br />
           <br />
           Because I place a lot of importance on preserving a good work-life
