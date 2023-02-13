@@ -16,8 +16,7 @@ const Box = styled.div`
 
   ${mediaQueries(30)`
     justify-content: flex-end;
-    align-items: start;
-    padding-right: 10px;       
+    align-items: start; 
   `};
 `;
 
@@ -41,17 +40,26 @@ const Main = styled.div`
   `};
 
   ${mediaQueries(30)`
-          width: 67vw;
-          height: auto;
+          width: 75%;
+          height: 60vh;
           backdrop-filter: blur;
           margin-top:2rem;
           font-size: calc(0.5rem + 1vw);
-          transform: translateY(50px);       
+          transform: translateY(50px);   
+          padding: 1rem;
+          margin-right: 10px;
+          align-items: flex-start;
+          overflow: scroll;
+
   `};
 
-  ${mediaQueries(20)`
+  ${mediaQueries(25)`
+   width: 100%;
+          height: 40vh;
           padding: 1rem;
-          font-size: calc(0.4rem + 1vw);        
+          font-size: calc(0.4rem + 1vw);    
+          background-color: red;  
+          paddong: 0px;  
   `};
 `;
 
