@@ -8,7 +8,7 @@ export const Projects = [
     date: "18 Jan, 2023",
     imgSrc: "website/Unsplash.png",
     link: "",
-    demo: "https://unsplash-qfu57jeuc-richikennedy.vercel.app/",
+    demo: "https://unsplash-kappa.vercel.app/",
     github: "https://github.com/RichiKennedy/Unsplash",
   },
   {
